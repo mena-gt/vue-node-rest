@@ -1,0 +1,30 @@
+
+version: "3"
+
+services:
+    serversvc:
+        build: 
+            context: .
+            dockerfile: ./docker/Dockerfile
+        container_name: node
+        hostname: webserver
+        ports:
+            - "3000:3000"
+        networks:
+            - nodenet
+    
+    proxysvc:
+        container_name: nginx
+        build: ./docker/nginx/
+        ports:
+            - "8080:80"
+        networks:
+            - nodenet
+        depends_on: 
+            - serversvc
+        links:
+            - "serversvc:node"
+
+networks:
+    nodenet:
+        driver: bridge

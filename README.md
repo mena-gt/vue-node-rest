@@ -58,5 +58,5 @@ docker-compose up --build -d
 * Ingresar a
 
     ```
-    127.0.0.0:3000/
+    127.0.0.0:8080/
     ```
