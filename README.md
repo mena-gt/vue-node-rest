@@ -22,11 +22,11 @@
 * Crear los archivos para variables de entorno
 
     ```
-    cp project/env/sample.develop backend/env/.develop
-    cp project/env/sample.testing backend/env/.testing
+    cp project/env/sample.develop project/env/.develop
+    cp project/env/sample.production project/env/.production
     ```
 
-### Entorno de desarrollo
+## Para entorno de desarrollo
 
 * Instalar dependencias de desarrollo
 
@@ -47,7 +47,7 @@
     127.0.0.0:3000/
     ```
 
-### Entorno de production
+## Para entorno de produccion
 
 * Crear y ejecutar el contenedor docker
 
